@@ -48,4 +48,4 @@ st.write(f'{prediction}の予測です')
 
 if st.button('Next page', disabled=button_disable):
     st.write('次のページ読み込み中')
-    st.switch_page('pages/01_AI_prediction.py')
+    st.switch_page('pages/01_make_prediction.py')
