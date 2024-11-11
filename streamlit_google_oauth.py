@@ -1,3 +1,5 @@
+# from  https://github.com/yagays/streamlit-google-oauth/blob/main/streamlit_google_oauth.py
+
 import asyncio
 import os
 
@@ -38,7 +40,7 @@ def google_oauth2_required(func):
 
         if st.session_state.token is None:
             try:
-                code = st.experimental_get_query_params()["code"]
+                code = st.query_params.to_dict()["code"]
             except:
                 st.write(
                     f"""<h1>
