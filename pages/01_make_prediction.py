@@ -5,6 +5,8 @@ import japanize_matplotlib
 import pandas as pd
 import numpy as np
 
+base_page.configure_page()
+
 st.header(f'{st.session_state.category}の{st.session_state.prediction}の入力')
 
 input_col, disp_col = st.columns(2)

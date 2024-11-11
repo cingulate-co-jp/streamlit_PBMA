@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import japanize_matplotlib
 import pandas as pd
 
+base_page.configure_page()
+
 st.header('AI予測とあなたの予測の結果')
 df = pd.DataFrame(
     {
@@ -62,3 +64,6 @@ st.pyplot(fig)
 
 st.subheader('入力されたデータ')
 st.dataframe(df)
+
+if st.button('Back to prediction'):
+    st.switch_page('pages/01_make_prediction.py')
