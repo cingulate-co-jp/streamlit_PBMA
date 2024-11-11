@@ -3,6 +3,9 @@ import streamlit as st
 
 from streamlit_google_oauth import google_oauth2_required
 
+# 共通設定を適用
+base_page.configure_page()
+
 @google_oauth2_required
 def main():
     user_id = st.session_state.user_id
@@ -10,9 +13,6 @@ def main():
     st.write(f"You're logged in {user_id}, {user_email}")
 
 main()
-
-# 共通設定を適用
-base_page.configure_page()
 
 st.header('未来予測ファクトブック')
 
