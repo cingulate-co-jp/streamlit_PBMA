@@ -5,15 +5,7 @@ from streamlit_google_oauth import google_oauth2_required
 
 # 共通設定を適用
 base_page.configure_page()
-'''
-@google_oauth2_required
-def main():
-    user_id = st.session_state.user_id
-    user_email = st.session_state.user_email 
-    st.write(f"You're logged in {user_id}, {user_email}")
 
-main()
-'''
 st.header('未来予測ファクトブック')
 
 ### バイヤーの名前を入力 ###
