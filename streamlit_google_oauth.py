@@ -44,8 +44,8 @@ def google_oauth2_required(func):
             except:
                 st.write(
                     f"""<h1>
-                    Please login using this <a target="_self"
-                    href="{authorization_url}">url</a></h1>""",
+                    ログインするには <a target="_self"
+                    href="{authorization_url}">こちら</a> を押してください</h1>""",
                     unsafe_allow_html=True,
                 )
             else:
