@@ -18,7 +18,7 @@ jobs: # ジョブの定義
       # step2 プルリクエストを自動でマージ，元のブランチを削除
       - name: Auto Merge pull request
         env:
-          GITHUB_TOKEN: ${{ secrets.GITBUN_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITBUN_TOKEN }}
         run: |
           PR_BRANCH=${{ github.event.pull_request.head.ref }}
           PR_NUMBER=${{ github.event.pullrequest.number }}
