@@ -52,7 +52,20 @@ with disp_col:
     else:
         st.dataframe(st.session_state.prediction_df)
 
-if st.button('Make prediction'):
-    if 'buyer_predicion' not in st.session_state:
-        st.session_state.buyer_prediction = df
-    st.switch_page('pages/02_show_prediction.py')
+_next, _return = st.columns([0.5, 0.5])
+
+with _return:
+    # 最初からやり直す
+    if st.button('最初からやり直す'):
+        # 入力した情報の削除
+        for item in ["name", "category", "prediction", "prediction_df"]:
+            del st.session_state[item]
+        for idx in df_index:
+            del st.session_state[idx]
+
+with _next:
+    # 次に進む
+    if st.button('結果を見る'):
+        if 'buyer_predicion' not in st.session_state:
+            st.session_state.buyer_prediction = df
+        st.switch_page('pages/02_show_prediction.py')

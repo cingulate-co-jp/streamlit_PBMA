@@ -87,7 +87,7 @@ else:
 
 
 # 何を予測するのかの選択肢
-options_prediction = ['', 'トレンド', '見込み', '対策後見込み']
+options_prediction = ['', 'トレンド', '対策前見込み', '対策後見込み']
 
 if 'prediction' not in st.session_state:
     st.session_state.prediction = ''
@@ -118,5 +118,5 @@ else:
     st.write(f'今回は{st.session_state.prediction}の予測を行います')
 
 
-if st.button('Next page', disabled=button_disable):
+if st.button('予測を入力する', disabled=button_disable):
     st.switch_page('pages/01_make_prediction.py')
