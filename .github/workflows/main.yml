@@ -11,9 +11,6 @@ jobs: # ジョブの定義
     runs-on: ubuntu-latest # # ジョブを実行する仮想環境
 
     steps:
-      # step1 必要なパッケージ（GitHub CLI）をインストール
-      - name: Install GitHub CLI
-        run: brew install gh
         
       # step2 コードのチェックアウト
       - name: Check out code
