@@ -23,10 +23,6 @@ jobs: # ジョブの定義
           PR_BRANCH=${{ github.event.pull_request.head.ref }}
           PR_NUMBER=${{ github.event.pullrequest.number }}
 
-      # step3
-      - name: Debug PR information
-        run: echo "PR_BRANCH=${{ github.event.pull_request.head.ref }} PR_NUMBER=${{ github.pull_request.number}}"
-
           gh pr merge $PR_NUMBER --merge --admin --repo ${{ github.repository }}
 
           gh api -X DELETE "repos/${{ github.repository }}/git/refs/heads/${PR_BRANCH}"
