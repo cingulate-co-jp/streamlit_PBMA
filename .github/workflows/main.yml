@@ -1,10 +1,10 @@
 name: Auto Merge and Delete Branch # ワークフローの名前
 
 on: # ワークフローのトリガーとなるイベント
-  pull_request:　# プルリクエストを対象
+  pull_request: # プルリクエストを対象
     branches:
       - main  # mainブランチへのプルリクエストを対象
-    types: [opened]　# プルリクエストが新規作成された時のみ
+    types: [opened] # プルリクエストが新規作成された時のみ
     
 jobs: # ジョブの定義
   auto-merge: # ジョブの名前
