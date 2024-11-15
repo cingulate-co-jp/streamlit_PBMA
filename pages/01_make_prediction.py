@@ -15,7 +15,7 @@ df_index = ['3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11
 # 初期化: 各入力欄のセッションステートを初期値0で設定
 for i in range(len(df_index)):
     if df_index[i] not in st.session_state:
-        st.session_state[df_index[i]] = 0
+        st.session_state[df_index[i]] = 100
 
 with input_col:
     st.subheader("予測の入力")
